@@ -1,0 +1,32 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+       
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://127.0.0.1:3306/reser
+    username: reser
+    password: reser
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        format_sql: true
+        show_sql: true 
+
+#        validate
+
+jwt:
+  header: Authorization
+  secret: c2luY2UgMjAyMSDso7zsi53tmozsgqwg7IOB7IOB7ZWg7IiY7JeG64qUIO2FjO2BrCDruJTroZzqt7gg7KCc7J6R
+  token-validity-in-seconds: 3600000
